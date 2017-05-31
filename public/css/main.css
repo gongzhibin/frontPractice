@@ -1,0 +1,387 @@
+/* IE8+支持 */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* .main{
+  position:relative;
+} */
+#status {
+    width: 300px;
+    margin: 20px auto;
+    border: 5px solid #ff5c33;
+}
+
+.class1 {
+    max-width: 300px;
+    margin: 20px auto;
+    border: 5px solid #ff5c33;
+}
+
+.class2 {
+    width: 300px;
+    margin: 20px auto;
+    border: 5px solid #ff5c33;
+}
+
+.class3 {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 5px solid #ff5c33;
+    box-sizing: content-box;
+}
+
+.class4 {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 5px solid #ff5c33;
+}
+
+.class5 {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 5px solid #ff5c33;
+    position: relative;
+    left: 30px;
+}
+
+.class5 {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 5px solid #ff5c33;
+    position: relative;
+    left: 30px;
+}
+
+.class6 {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 5px solid #ff5c33;
+    position: fixed;
+    right: 0;
+    top: 50px;
+}
+
+.fatherOf7 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 5px solid #ff5c33;
+}
+
+.class7 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 5px solid #4dff4d;
+    top: 30px;
+    right: 0;
+}
+
+.container {
+    position: relative;
+    border: 5px solid #ff5c33;
+    overflow: auto;
+    zoom: 1;
+}
+
+/*.nav {*/
+/*position: absolute;*/
+/*left: 0;*/
+/*top: 0;*/
+/*width: 200px;*/
+/*border: 5px solid #4dff4d;*/
+/*}*/
+/*.rightContent {*/
+/*margin-left: 200px;*/
+/*border: 5px solid #ff99ff;*/
+/*}*/
+
+/*@media screen and (min-width: 600px) {*/
+/*.nav1 {*/
+/*float: left;*/
+/*width: 25%;*/
+/*border: 5px solid #4dff4d;*/
+/*}*/
+
+/*.rightContent {*/
+/*margin-left: 25%;*/
+/*border: 5px solid #ff99ff;*/
+/*}*/
+/*}*/
+
+.nav {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    border: 5px solid #4dff4d;
+}
+
+.column {
+    display: inline-block;
+    width: 75%;
+    vertical-align: top;
+    border: 5px solid #66c2ff;
+}
+
+.rightContent {
+    border: 3px solid #ffff66;
+}
+
+.container:after {
+    clear: both;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 20px 0;
+    height: 100px;
+    width: 100%;
+    border: 5px solid #ff5c33;
+}
+
+body {
+    margin-bottom: 120px;
+}
+
+.class8 {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 5px solid #ff5c33;
+    overflow: auto;
+    zoom: 1;
+}
+
+.class8 img {
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+.box {
+    float: left;
+    width: 400px;
+    height: 100px;
+    margin: 0px 0; /*设置过大，两个box为了使margin达到标准容易错开*/
+    padding: 20px;
+    border: 5px solid #ff5c33;
+}
+
+.afterBox {
+    /*width: 100%;*/ /*在IE中设置长度100%，直接进入下一行*/
+    margin: 20px 0;
+    padding: 20px;
+    border: 5px solid #4dff4d;
+}
+
+.clearfloat {
+    clear: left;
+}
+
+.three-column {
+    margin: 20px 0;
+    border: 5px solid #ff5c33;
+    padding: 1em;
+    -moz-column-count: 3;
+    -moz-column-gap: 1em;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 1em;
+    column-count: 3;
+    column-gap: 1em;
+}
+
+.flexTest {
+    display: -webkit-flex;
+    display: flex;
+    border: 5px solid #ff5c33;
+    margin: 20px 0;
+}
+
+.initial {
+    -webkit-flex: initial;
+    flex: initial;
+    width: 200px;
+    min-width: 100px;
+    border: 5px solid #4dff4d;
+}
+
+.none {
+    -webkit-flex: none;
+    flex: none;
+    width: 200px;
+    border: 5px solid #4dff4d;
+}
+
+.flex1 {
+    -webkit-flex: 1;
+    flex: 1;
+    border: 5px solid #4dff4d;
+}
+
+.flex2 {
+    -webkit-flex: 2;
+    flex: 2;
+    border: 5px solid #4dff4d;
+}
+
+.flexAlignCenter {
+    height: 300px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    border: 5px solid #ff5c33;
+    margin: 20px 0;
+}
+
+.flexContent {
+    border: 5px solid #4dff4d;
+}
+
+.triangle {
+    border: 5px solid #ff5c33;
+    margin: 20px auto;
+}
+
+.triangleDescribe {
+    border: 5px solid #4dff4d;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.triangleContainer {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid #ff5c33;
+    margin: 20px 0;
+
+    /*height: 100px;*/
+}
+
+#triangle1 {
+    width: 0;
+    height: 0;
+    margin: 10px auto;
+    border-left: 50px solid #4dff4d;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-top: 50px solid transparent;
+}
+
+#triangle2 {
+    width: 0;
+    height: 0;
+    margin: 10px auto;
+    border-left: 50px solid transparent;
+    border-right: 50px solid #ff99ff;
+    border-bottom: 50px solid transparent;
+    border-top: 50px solid transparent;
+}
+
+#triangle3 {
+    width: 0;
+    height: 0;
+    margin: 10px auto;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #ff5c33;
+    border-top: 50px solid transparent;
+}
+
+#triangle4 {
+    width: 0;
+    height: 0;
+    margin: 10px auto;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-top: 100px solid #ffff66;
+}
+
+#triangle5 {
+    width: 0;
+    height: 0;
+    margin: 10px auto;
+    border-left: 50px solid #4dff4d;
+    border-right: 50px solid #ff99ff;
+    border-bottom: 50px solid #ff5c33;
+    border-top: 100px solid #ffff66;
+}
+
+#triangle6 {
+    /*width: 10px;*/
+    /*height: 10px;*/
+    margin: 10px auto;
+    /*border-left: 50px solid #4dff4d;*/
+    border-right: 50px solid #ff99ff;
+    border-bottom: 50px solid #ff5c33;
+    border-top: 50px solid #ffff66;
+}
+
+.canvasContainer {
+    border: 5px solid #ff5c33;
+    margin: 20px auto;
+}
+
+#test-canvas {
+    height: 400px;
+}
+
+#return-top {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+button {
+    height: 40px;
+    margin: 5px;
+    padding: 6px 12px;
+    color: #fff;
+    background-color: #66c2ff;
+    border: 1px solid #66c2ff;
+    border-radius: 5px;
+}
+
+.operation {
+    margin: 10px;
+    padding: 4px;
+}
+
+.all-operations {
+    border: 5px solid #ff5c33;
+    margin: 0 0 20px 0;
+}
+
+.test-form {
+    border: 5px solid #ff5c33;
+    margin: 20px auto;
+}
+
+/*.ordinary-form{*/
+/*margin: 10px auto;*/
+/*}*/
+.ordinary-input {
+    margin: 20px auto;
+    width: 100px;
+    height: 30px;
+}

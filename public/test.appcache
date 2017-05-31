@@ -1,0 +1,9 @@
+CACHE MANIFEST
+#V1
+./css/
+./imgs/
+./scripts/
+
+NETWORK:
+./index.html
+

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>front practice</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+<div class="main">
+    <div class="all-operations">
+        <div id="some-operations" class="operation">
+            <button id="run-canvas">run Canvas</button>
+            <button id="test-contains">test contains()</button>
+            <button id="test-event">test event</button>
+            <button id="test-event-type">test event.type</button>
+            <button id="test-bubbles">test bubbles</button>
+            <button id="test-xy">test x&y</button>
+        </div>
+        <div id ='server-operations' class="operation">
+            <button id="test-ajax">text ajax</button>
+            <button id="test-XMLHttpRequest">test XMLHttpRequest</button>
+            <button id="test-cors">test cors</button>
+            <button id="test-jsonp">test jsonp</button>
+            <button id="test-websocket">test websocket</button>
+        </div>
+    </div>
+    <!--<div class="test-form">-->
+        <!--<form class="ordinary-form" method="post" id="test-form-submit">-->
+            <!--<input class="ordinary-input" type="text" placeholder="输入电话"/>-->
+        <!--</form>-->
+    <!--</div>-->
+    <div id="status">
+        进度显示：
+    </div>
+    <div class="class1">
+        <div class="class11"><span>1.1 你好</span></div>
+        <div class="class12"><span>1.2 你好</span></div>
+    </div>
+    <div class="class2">
+        <span>2 我是300px</span>
+    </div>
+    <div class="class3">
+        <span>3 比2大</span>
+    </div>
+    <div class="class4">
+        <span>4 和2一样大</span>
+    </div>
+    <div class="class5">
+        <span>5 relative偏离正常显示位置30px</span>
+    </div>
+    <div class="class6">
+        <span>6 fixed已经固定在视窗的一个位置上了</span>
+        <button id="return-top">返回顶部</button>
+    </div>
+    <div class="fatherOf7">
+        <div class="class7">
+            <span>7 absolute相对第一个非static的父节点定位</span>
+        </div>
+    </div>
+    <div class="class8">
+        <p>
+            <img src="./imgs/bayMax.jpg" alt="bayMax">塞纳河畔 左岸的咖啡
+        </p>
+        <!-- 我手一杯 品尝你的美 留下唇印的嘴 花店玫瑰 名字写错谁 告白气球 风吹到对街 微笑在天上飞 你说你有点难追
+            想让我知难而退 礼物不需挑最贵 只要香榭的落叶 喔 营造浪漫的约会 不害怕搞砸一切 拥有你就拥有 全世界 亲爱的 爱上你 从那天起 甜蜜的很轻易 亲爱的 别任性 你的眼睛 在说我愿意 塞纳河畔 左岸的咖啡 我手一杯
+            品尝你的美 留下唇印的嘴 花店玫瑰 名字写错谁 告白气球 风吹到对街 微笑在天上飞 你说你有点难追 想让我知难而退 礼物不需挑最贵 只要香榭的落叶 喔 营造浪漫的约会 不害怕搞砸一切 拥有你就拥有 全世界 亲爱的
+            爱上你 从那天起 甜蜜的很轻易 亲爱的 别任性 你的眼睛 在说我愿意 亲爱的 爱上你 恋爱日记 飘香水的回忆 一整瓶 的梦境 全都有你 搅拌在一起 亲爱的别任性 你的眼睛 在说我愿意-->
+    </div>
+</div>
+
+<div class="container">
+    <div class="nav nav1">
+        <li>主页</li>
+        <li>归档</li>
+        <li>标签</li>
+        <li>关于</li>
+    </div><!--防止列与列之间的间隙
+ --><div class="column">
+        <div class="rightContent">
+            <span>section 的 margin-left 样式确保了有足够的空间容纳 nav 元素。</span>
+        </div>
+        <div class="rightContent">
+            <span>这个例子在容器比nav元素高的时候可以正常工作。如果容器比nav元素低，那么nav会溢出到容器的外面。之后我们会讨论下其他布局技术，它们都各有优劣。</span>
+        </div>
+        <div class="rightContent">
+            <span>vertical-align 属性会影响到 inline-block 元素，你可能会把它的值设置为 top ；你需要设置每一列的宽度；如果HTML源代码中元素之间有空格，那么列与列之间会产生空隙</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span>如果你使用了一个固定定位的页眉或页脚，确保有足够的空间来显示它们！我在 body 上面加了 margin-bottom 。</span>
+    </div>
+</div>
+
+
+<div style="zoom: 1">
+    <div class="box">
+        我是浮动元素
+    </div>
+    <div class="afterBox">
+        在这个例子中， section 元素实际上是在 div 之后的（译注：DOM结构上）。然而 div 元素是浮动到左边的，于是 section 中的文字就围绕了 div ，并且 section 元素包围了整个元素。如果我们想让
+        section 显示在浮动元素之后呢？
+    </div>
+</div>
+
+<div class="box">
+    我是浮动元素
+</div>
+<div class="afterBox clearfloat">
+    使用 clear 我们就可以将这个段落移动到浮动元素 div 下面。你需要用 left 值才能清除元素的向左浮动。你还可以用 right 或 both 来清除向右浮动或同时清除向左向右浮动。
+</div>
+<div class="three-column">
+    塞纳河畔 左岸的咖啡
+    我手一杯 品尝你的美
+    留下唇印的嘴
+    花店玫瑰 名字写错谁
+    告白气球 风吹到对街
+    微笑在天上飞
+    你说你有点难追 想让我知难而退
+    礼物不需挑最贵 只要香榭的落叶
+    喔 营造浪漫的约会 不害怕搞砸一切
+    拥有你就拥有 全世界
+    亲爱的 爱上你 从那天起
+    甜蜜的很轻易
+    亲爱的 别任性 你的眼睛
+    在说我愿意
+    塞纳河畔 左岸的咖啡
+    我手一杯 品尝你的美
+    留下唇印的嘴
+    花店玫瑰 名字写错谁
+    告白气球 风吹到对街
+    微笑在天上飞
+    你说你有点难追 想让我知难而退
+    礼物不需挑最贵 只要香榭的落叶
+    喔 营造浪漫的约会 不害怕搞砸一切
+    拥有你就拥有 全世界
+    亲爱的 爱上你 从那天起
+    甜蜜的很轻易
+    亲爱的 别任性 你的眼睛
+    在说我愿意
+    亲爱的 爱上你 恋爱日记
+    飘香水的回忆
+    一整瓶 的梦境 全都有你
+    搅拌在一起
+    亲爱的别任性 你的眼睛
+    在说我愿意
+</div>
+<div class="flexTest">
+    <div class="initial">空间足够的时候，我的宽度是200px，如果空间不足，我会变窄到100px，但不会再窄了。</div>
+    <div class="none">无论窗口如何变化，我的宽度一直是200px。</div>
+    <div class="flex1">我会占满剩余宽度的1/3。</div>
+    <div class="flex2">我会占满剩余宽度的2/3。</div>
+</div>
+
+<div class="flexAlignCenter">
+    <div class="flexContent">flex实现水平垂直居中</div>
+</div>
+<div class="triangle">
+    <div class="triangleDescribe">css实现三角形:内容为空，三个边的border透明，另外一个边的border显示</div>
+    <div class="triangleContainer">
+        <div id="triangle1"></div>
+        <div id="triangle2"></div>
+        <div id="triangle3"></div>
+        <div id="triangle4"></div>
+        <div id="triangle5"></div>
+        <div id="triangle6">你好</div>
+
+    </div>
+</div>
+<div class="canvasContainer">
+    <p>canvas练习</p>
+    <canvas id="test-canvas"></canvas>
+</div>
+
+<script src="scripts/bundle.js" defer></script>
+<script src="https://cdn.bootcss.com/socket.io/1.7.3/socket.io.min.js" defer></script>
+<script>
+    var handleJsonpResponse = function (res) {
+        alert("ip address: " + res.ip + "\ncity: " + res.city + "\nregion: " + res.region_name + "\ncountry name: " + res.country_name);
+    }
+</script>
+</body>
+
+</html>
+<!--如果外部CSS资源较小，您可以直接将这些内容插入到HTML文档中，这称为“内嵌”。-->
+<!--通过这种方式内嵌较小CSS资源，浏览器可以继续呈现网页。-->
+<!--请注意，如果CSS文件较大，完全内嵌CSS可能会导致PageSpeed Insights通过按优先级排列可见内容警告您网页的首屏部分体积过大。-->
+<!--如果CSS文件较大，您需要识别和内嵌呈现首屏内容所需的CSS，并暂缓加载其余样式，直到首屏内容显示之后为止。-->
