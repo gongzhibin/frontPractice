@@ -129,20 +129,21 @@ window.addEventListener('load', function () {
     //3.resize事件
     //4.scroll事件
 
-    //测试resize事件
-    window.addEventListener('resize', function (event) {
-        alert('window resized!')
-    }, false)
-    //测试scroll事件
-    window.addEventListener('scroll', function (event) {
-        var thisTop = document.body.scrollTop;
-        console.log(thisTop);
-        // if (thisTop > 2500) {
-        //     alert('距离顶部大于2500，准备上天吧！');
-        //     //触发返回顶部事件
-        //     returnToTop();
-        // }
-    }, false);
+    // //测试resize事件
+    // window.addEventListener('resize', function (event) {
+    //     alert('window resized!')
+    // }, false)
+
+    // //测试scroll事件
+    // window.addEventListener('scroll', function (event) {
+    //     var thisTop = document.body.scrollTop;
+    //     console.log(thisTop);
+    //     // if (thisTop > 2500) {
+    //     //     alert('距离顶部大于2500，准备上天吧！');
+    //     //     //触发返回顶部事件
+    //     //     returnToTop();
+    //     // }
+    // }, false);
 
     // 焦点事件
     // 1.blur事件       元素失去焦点时触发，不会冒泡
@@ -212,7 +213,7 @@ window.addEventListener('load', function () {
             if ((this.status >= 200 && this.status < 300) || this.status == 304) {
                 alert("responseText:" + this.responseText + "\nresponseXML:" + this.responseXML + "\nstatus:" + this.status + "\nstatusText:" + this.statusText);
             } else {
-                alert("XMLHttpRequest请求不成功：" + this.status)
+                alert("XMLHttpRequest请求不成功，this.status=" + this.status)
             }
         };
         xhr.onprogress = function (event) {
@@ -229,31 +230,35 @@ window.addEventListener('load', function () {
     //XMLHttpRequest CORS请求
     var testCORS = $('#test-cors');
     testCORS.on('click', function () {
-        var xhrCORS = new XMLHttpRequest();//支持IE7+,兼容方法位于：js高级程序编程P572
-        // xhrCORS.onreadystatechange = function () {//readyState属性由一个值变成另外一个值都会触发readystatechange事件
-        //     //0表示未初始化，尚未调用open()方法
-        //     //1表示启动，已经调用open()方法，但是尚未调用send()方法
-        //     //2表示发送，已经调用send()方法，但是尚未收到响应
-        //     //3表示接收，表明已经接收到部分响应数据
-        //     //4表示完成，已经接收到全部响应数据，可以在客户端使用
-        //     if (this.readyState == 4) {
-        //         if ((this.status >= 200 && this.status < 300) || this.status == 304) {
-        //             alert("responseText:" + this.responseText + "\nresponseXML:" + this.responseXML + "\nstatus:" + this.status + "\nstatusText:" + this.statusText);
-        //         } else {
-        //             alert("XMLHttpRequest请求不成功：" + this.status)
-        //         }
-        //     }
-        // };
-        xhrCORS.onload = function () {//XMLHttpRequest2级使用方法 无需检查readyState状态
-            if ((this.status >= 200 && this.status < 300) || this.status == 304) {
-                alert("responseText:" + this.responseText + "\nresponseXML:" + this.responseXML + "\nstatus:" + this.status + "\nstatusText:" + this.statusText);
-            } else {
-                alert("XMLHttpRequest请求不成功：" + this.status)
+        //支持IE7+,兼容方法位于：js高级程序编程P572
+        var xhrCORS = new XMLHttpRequest();
+        //readyState属性由一个值变成另外一个值都会触发readystatechange事件
+        xhrCORS.onreadystatechange = function () {
+            //0表示未初始化，尚未调用open()方法
+            //1表示启动，已经调用open()方法，但是尚未调用send()方法
+            //2表示发送，已经调用send()方法，但是尚未收到响应
+            //3表示接收，表明已经接收到部分响应数据
+            //4表示完成，已经接收到全部响应数据，可以在客户端使用
+            if (this.readyState == 4) {
+                if ((this.status >= 200 && this.status < 300) || this.status == 304) {
+                    alert("responseText: " + this.responseText + "\nresponseXML: " + this.responseXML + "\nstatus: " + this.status + "\nstatusText: " + this.statusText);
+                } else {
+                    alert("XMLHttpRequest请求不成功，this.status = " + this.status +" 该跨域响应服务器可于E:/CORS/文件夹中开启")
+                }
             }
         };
+        //XMLHttpRequest2级使用方法 无需检查readyState状态
+        // xhrCORS.onload = function () {
+        //     if ((this.status >= 200 && this.status < 300) || this.status == 304) {
+        //         alert("responseText:" + this.responseText + "\nresponseXML:" + this.responseXML + "\nstatus:" + this.status + "\nstatusText:" + this.statusText);
+        //     } else {
+        //         alert("XMLHttpRequest请求不成功，this.status=" + this.status)
+        //     }
+        // };
         xhrCORS.open('post', 'http://127.0.0.1:3001/cors', true);//该跨域请求位于E:/CORS/文件夹中
         //需要注意的是，如果要发送Cookie，Access-Control-Allow-Origin就不能设为星号，必须指定明确的、与请求网页一致的域名
-        //同时，Cookie依然遵循同源政策，只有用服务器域名设置的Cookie才会上传，其他域名的Cookie并不会上传，且（跨源）原网页代码中的document.cookie也无法读取服务器域名下的Cookie。
+        //同时，Cookie依然遵循同源政策，只有用服务器域名设置的Cookie才会上传，其他域名的Cookie并不会上传，
+        // 且（跨源）原网页代码中的document.cookie也无法读取服务器域名下的Cookie。
         xhrCORS.withCredentials = true;
         xhrCORS.send(null);
     })
